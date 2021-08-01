@@ -11,17 +11,17 @@ function NavBar() {
     padding: 0,
   };
   return (
-    <div className="NavBar">
+    <div className="navBar">
         <List style={flexContainer}>
-          <Link href="/home">
+          <Link href="/projects">
             <ListItem>My Projects</ListItem>
           </Link>
 
-          <Link>
+          <Link href="/skills">
             <ListItem>My Skills</ListItem>
           </Link>
 
-          <Link>
+          <Link href="/about">
             <ListItem>About Me</ListItem>
           </Link>
 

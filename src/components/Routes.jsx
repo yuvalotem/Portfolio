@@ -1,48 +1,38 @@
 import React, { Fragment } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import MyProjects from './MyProjects'
+import Skills from './Skills'
+import AboutMe from './AboutMe'
 
 function Routes() {
 
     return (
         <Router>
             <Route
-                path='/home'
+                path='/projects'
                 exact render={({ match }) =>
                     <MyProjects
                         match={match}
                     />
                 }
             />
-            {/* <Route path="/home">
-                <MyProjects />
-            </Route> */}
-            {/* <Route
-                path='/login'
+            <Route
+                path='/skills'
                 exact render={({ match }) =>
-                    <Login
+                    <Skills
                         match={match}
                     />
                 }
             />
             <Route
-                path='/signup'
+                path='/about'
                 exact render={({ match }) =>
-                    <Signup
-                    match={match}
+                    <AboutMe
+                        match={match}
                     />
                 }
             />
-            <Route
-                path='/home'
-                render={({ match }) =>
-                    <Container
-                    match={match}
-                    />
-                }
-            >
 
-            </Route> */}
         </Router>
     )
 }

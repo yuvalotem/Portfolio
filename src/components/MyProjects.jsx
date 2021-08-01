@@ -4,7 +4,7 @@ import {
     Link
   } from '@material-ui/core';
 
-  function NavBar() {
+  function MyProjects() {
     const projects = [
       {
         name: 'CRM',
@@ -22,12 +22,12 @@ import {
     },
     ];
     return (
-      <div className="MyProjects">
+      <div className="myProjects">
           {projects.map(p=>{
               return(
               <div>
                   <h1>{p.name}</h1>
-                  <span>Link: {p.link}</span>
+                  <span><a href={p.link}>Link to {p.name}</a></span>
                   <List>Languages: {p.languages.map(l=><ListItem>{l}</ListItem>)}</List>
                   <List>Frameworks: {p.frameworks.map(l=><ListItem>{l}</ListItem>)}</List>
                   <List>Database: {p.database.map(l=><ListItem>{l}</ListItem>)}</List>
@@ -38,4 +38,4 @@ import {
     );
   }
 
-  export default NavBar;
+  export default MyProjects;
